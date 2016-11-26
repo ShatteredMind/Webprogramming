@@ -8,7 +8,7 @@ def simple_app(environ, start_response):
     
     path = '.' + environ['PATH_INFO']
     status = '200 OK'
-    headers = [('Content-type', 'text/plain; charset=utf-8')]
+    headers = [('Content-type', 'text/html; charset=utf-8')]
     if not os.path.isfile(path):
         path = './index.html'
     file = open(path,'r')
